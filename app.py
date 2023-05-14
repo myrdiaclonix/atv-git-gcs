@@ -15,15 +15,10 @@ def readFile(path):
    f.close()
    return archive
 
-def readFile(path):
-   f = open(path, "r")
-   archive = f.read()
-   f.close()
-   return archive
-
 @app.route("/api-teste", methods=["POST"])
 def api():
-   return jsonify({'message': f'otima API mano que legal uhulll {randomDogBreed()}'})
+   file = readFile("arquivo.txt")
+   return jsonify({'message': f'otima API mano que legal uhulll {randomDogBreed()}, {file}'})
 
 @app.route("/user", methods=["GET"])
 def user():
