@@ -22,7 +22,7 @@ def api():
 
 @app.route("/user", methods=["GET"])
 def user():
-   return jsonify({'message': [f'USER FOFO {randomNumber()}', 'lembre de piscar 👀'], 'status': 'fail'})
+   return jsonify({'message': [f'USER FOFO {randomNumber()}', 'lembre de piscar 👀', 'ok'], 'status': 'fail'})
 
 @app.route("/news", methods=["PUT"])
 def news():
