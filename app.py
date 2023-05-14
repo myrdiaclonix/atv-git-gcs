@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import random
 app = Flask(__name__)
 
-def somaAleatoria():
+def randomNumber():
    return random.randint(1, 10)
 
 def randomDogBreed():
@@ -22,7 +22,7 @@ def api():
 
 @app.route("/user", methods=["GET"])
 def user():
-   return jsonify({'message': [f'USER FOFO {somaAleatoria()}', 'lembre de piscar 👀'], 'status': 'fail'})
+   return jsonify({'message': [f'USER FOFO {randomNumber()}', 'lembre de piscar 👀'], 'status': 'fail'})
 
 @app.route("/news", methods=["PUT"])
 def news():
