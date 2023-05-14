@@ -9,14 +9,25 @@ def randomDogBreed():
    breeds = ["Labrador Retriever", "German Shepherd", "Golden Retriever", "French Bulldog", "Bulldog", "Poodle", "Beagle", "Dachshund", "Rottweiler", "Yorkshire Terrier"]
    return random.choice(breeds)
 
+def readFile(path):
+   f = open(path, "r")
+   archive = f.read()
+   f.close()
+   return archive
 
-@app.route("/api", methods=["POST"])
+def readFile(path):
+   f = open(path, "r")
+   archive = f.read()
+   f.close()
+   return archive
+
+@app.route("/api-teste", methods=["POST"])
 def api():
    return jsonify({'message': f'otima API mano que legal uhulll {randomDogBreed()}'})
 
 @app.route("/user", methods=["GET"])
 def user():
-   return jsonify({'message': f'USER FOFO {somaAleatoria()} '})
+   return jsonify({'message': f'USER FOFO {somaAleatoria()}'})
 
 @app.route("/news", methods=["PUT"])
 def news():
