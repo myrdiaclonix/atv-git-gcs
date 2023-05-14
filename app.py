@@ -8,7 +8,7 @@ def api():
 
 @app.route("/user", methods=["GET"])
 def user():
-   return jsonify({'message': 'USER FOFO'})
+   return jsonify({'message': 'lembre de piscar 👀'})
 
 @app.route("/news", methods=["PUT"])
 def news():
