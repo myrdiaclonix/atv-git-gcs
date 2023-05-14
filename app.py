@@ -15,6 +15,9 @@ def readFile(path):
    f.close()
    return archive
 
+def loginDeMentirinha():
+   return jsonify({'message': 'Login realizado com sucesso'})
+
 @app.route("/api/v1", methods=["POST"])
 def api():
    file = readFile("arquivo.txt")
@@ -27,6 +30,11 @@ def user():
 @app.route("/news", methods=["PUT"])
 def news():
    return jsonify({'message': 'NEWS GRANDE DEMAIS, se está doido, festa semana que vem ein'})
+
+@app.route("/login", methods=["GET"])
+def news():
+   return loginDeMentirinha()
+
 
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=8000, debug=True)
