@@ -24,9 +24,9 @@ def api():
 def user():
    return jsonify({'message': [f'USER FOFO {randomNumber()}', 'lembre de piscar 👀', 'ok'], 'status': 'fail'})
 
-@app.route("/news", methods=["PUT"])
+@app.route("/news", methods=["GET", "PUT"])
 def news():
-   return jsonify({'message': 'NEWS GRANDE DEMAIS, se está doido, festa semana que vem ein'})
+   return jsonify({'message': ['NEWS GRANDE DEMAIS, se está doido, festa semana que vem ein', 'Salve salve tudo de boas?']})
 
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=8000, debug=True)
