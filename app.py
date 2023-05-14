@@ -6,7 +6,7 @@ def randomNumber():
    return random.randint(1, 10)
 
 def randomDogBreed():
-   breeds = ["Labrador Retriever", "German Shepherd", "Golden Retriever", "French Bulldog", "Bulldog", "Poodle", "Beagle", "Dachshund", "Rottweiler", "Yorkshire Terrier"]
+   breeds = ["Labrador Retriever", "German Shepherd", "Golden Retriever", "French Bulldog", "Bulldog", "Poodle", "Beagle", "Dachshund", "Rottweiler", "Yorkshire Terrier", "Maltes"]
    return random.choice(breeds)
 
 def readFile(path):
