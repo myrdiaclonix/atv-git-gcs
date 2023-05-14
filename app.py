@@ -26,7 +26,6 @@ def user():
 
 @app.route("/news", methods=["PUT"])
 def news():
-   return jsonify({'message': 'NEWS DEMAIS TESTE'})
    return jsonify({'message': 'NEWS GRANDE DEMAIS, se está doido, festa semana que vem ein'})
 
 if __name__ == "__main__":
